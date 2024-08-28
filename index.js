@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const squareContainer = document.querySelector(".square__container")
     let arr = []
-    const boxes = 100
+    const boxes = 150
 
     const screenHeight = window.innerHeight
     const screenWidth = window.innerWidth
