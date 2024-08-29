@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 trigger: img,
                 start: "top 45%",
                 end: "bottom 75%",
-                scrub: true
+                scrub: true,
+                once: true,
             }
         })
     })
@@ -104,7 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 trigger: img,
                 start: "top 55%",
                 end: "bottom 75%",
-                scrub: true
+                scrub: true,
+                once: true,
             }
         })
     })
@@ -118,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 start: "top 70%",
                 ease: "power4.inOut",
                 toggleActions: "play none none reverse",
-
+                once: true,
             }
         });
     });
