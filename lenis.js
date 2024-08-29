@@ -1,13 +1,15 @@
 gsap.registerPlugin(ScrollTrigger)
+const lerp = (a, b, n) => (1 - n) * a + n * b;
 
+const lenis = new Lenis()
 
-let lenis = new Lenis({
-    scrollTigger: {
-        lerp: 0.1,
-        smoothWheel: true
-    }
+lenis.on('scroll', (e) => {
+
 })
 
-lenis.on("scroll", ScrollTrigger.update)
-gsap.ticker.add((timer) => lenis.raf(timer * 500))
-gsap.ticker.lagSmoothing[0]
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
