@@ -141,6 +141,21 @@ document.addEventListener("DOMContentLoaded", function() {
             stagger: 0.03
         })
     })
+
+
+    const containerTest = document.querySelector(".container")
+
+    window.onload = function() {
+        gsap.to(containerTest, {
+            background: "#880808",
+            opacity: 1,
+            duration: 1,
+            onstart: function () {
+                containerTest.style.visibility = "visible"
+            }
+        })
+    }
+    
 })
 
 
