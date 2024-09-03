@@ -7,9 +7,10 @@ lenis.on('scroll', (e) => {
 
 })
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+lenis.on('scroll', ScrollTrigger.update)
 
-requestAnimationFrame(raf)
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 600)
+})
+
+gsap.ticker.lagSmoothing(0)
